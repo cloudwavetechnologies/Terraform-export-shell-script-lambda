@@ -37,11 +37,9 @@ resource "aws_lambda_function" "demo_lambda" {
   s3_key        = var.s3_key
   handler       = var.handler
   runtime       = var.runtime
+  role          = var.role_arn
   memory_size   = var.memory_size
   timeout       = var.timeout
-  role          = aws_iam_role.lambda_exec.arn
-  filename          = var.source_path
-  source_code_hash  = filebase64sha256(var.source_path)
 
   environment {
     variables = {
@@ -50,8 +48,5 @@ resource "aws_lambda_function" "demo_lambda" {
     }
   }
 
-  tags = {
-    Environment = "dev"
-    Project     = "supplychain"
-  }
+  tags = var.tags
 }
