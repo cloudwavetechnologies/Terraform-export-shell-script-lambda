@@ -9,7 +9,7 @@ export TF_VAR_bucket="supplychain-s3-000"
 export TF_VAR_s3_key="lambda/lambda_function.zip"
 export TF_VAR_memory_size=256
 export TF_VAR_timeout=60
-
+export TF_VAR_source_path="lambda_function.zip"
 export TF_VAR_tags='{
   Environment = "prod",
   Owner       = "manjunath",

@@ -47,3 +47,7 @@ variable "tags" {
   type        = map(string)
   description = "Tags for the Lambda function"
 }
+variable "source_path" {
+  type        = string
+  description = "Path to zipped Lambda code"
+}
