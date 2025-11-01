@@ -48,5 +48,6 @@ resource "aws_lambda_function" "demo_lambda" {
     }
   }
 
-  tags = var.tags
+ # optional tags
+ tags = var.tags
 }

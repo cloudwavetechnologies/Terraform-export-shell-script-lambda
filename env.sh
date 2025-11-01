@@ -11,10 +11,11 @@ export TF_VAR_memory_size=256
 export TF_VAR_timeout=60
 export TF_VAR_source_path="lambda_function.zip"
 export TF_VAR_role_arn=arn:aws:iam::093326771949:role/service-role/amazon-java-code-lambda-001-role-0w2vgpaj
-export TF_VAR_tags='{
-  Environment = "prod",
-  Owner       = "manjunath",
-  Project     = "cloud-training"
-}'
+# export TF_VAR_tags='{
+#   Environment = "prod",
+#   Owner       = "manjunath",
+#   Project     = "cloud-training"
+# }'
+unset TF_VAR_tags
 
 echo "Terraform environment variables exported!"
